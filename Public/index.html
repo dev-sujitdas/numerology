@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Numerology</title>
+</head>
+<body>
+    <!-- MAIN AREA -->
+    <main class="h-full w-full bg-slate-900 flex justify-center">
+
+        <!-- WOKR AREA -->
+        <div id="workArea" class="h-full w-4/5 bg-slate-800">
+
+            <!-- TOP CONTAINER -->
+            <div id="top" class="h-[100px] mt-4 flex justify-center items-center">
+                <p class="text-white font-extrabold text-7xl font-serif">Numerology</p>
+            </div>
+
+            <!-- MID CONTAINER -->
+            <div id="mid" class="h-96 w-full mt-6 flex flex-col items-center">
+                <div id="para" class="h-16 flex items-center justify-center">
+                    <h1 class="text-zinc-200 font-medium text-center text-xl">Chaldean Name Numerology - Destiny, Heart Desire and Dream Numbers</h1>
+                </div>
+
+                <!-- NUMEROLOGY CARD -->
+                <div class="h-56 w-96 flex flex-col justify-between overflow-hidden bg-slate-400 mt-6 rounded-lg shadow-xl shadow-slate-900">
+                    <div class="h-9 w-full bg-slate-700 flex items-center justify-center font-normal"><p class="text-white">Name Numerology</p></div>
+                    <div class="h-48 w-full flex flex-col items-center justify-evenly">
+                        <form>
+                            <label for="name" class="font-medium text-slate-900">Name</label>
+                            <input id="text" type="text" class="rounded-md shadow-sm shadow-slate-500 ml-1">
+                        </form>
+                        <div class="flex justify-evenly w-4/5">
+                            <button id="calculate" class="px-3 py-0.5 bg-red-700 hover:bg-red-900 rounded-md text-white shadow-md shadow-slate-700">Calculate</button>
+                            <button id="reset" class="px-8 py-0.5 bg-red-700 hover:bg-red-900 rounded-md text-white shadow-md shadow-slate-700">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            
+            <!-- NUMEROLOGY REPORT CONTAINER -->
+            <div id="numerology-container" class="w-full h-72 flex justify-center">
+                <div id="report" class="w-[90%] h-64 bg-slate-900 rounded-md shadow-xl shadow-slate-950">
+                    <div class="w-full h-12 text-center mt-5"><h1 id="title" class="font-bold text-4xl text-white capitalize"></h1></div>                    
+                    <div id="details" class="w-full h-fit mt-12 px-5">
+                        <div class="flex">
+                            <p class="font-bold text-lg text-slate-300 mr-5 mb-5">Your Destiny Number is:</p>
+                            <span class="h-8 w-8 bg-red-500 rounded-full flex items-center justify-center font-bold text-slate-200 text-lg"><h2 id="destiny-number">0</h2></span>
+                        </div>
+                        <div class="flex">
+                            <p class="font-bold text-lg text-slate-300 mr-5 mb-5">Your Heart Desire Number is:</p>
+                            <span class="h-8 w-8 bg-red-500 rounded-full flex items-center justify-center font-bold text-slate-200 text-lg"><h2 id="heart-desire">0</h2></span>
+                        </div>
+                        <div class="flex">
+                            <p class="font-bold text-lg text-slate-300 mr-5 mb-5">Your Personality Number is:</p>
+                            <span class="h-8 w-8 bg-red-500 rounded-full flex items-center justify-center font-bold text-slate-200 text-lg"><h2 id="personality-number">0</h2></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>                
+    </main>
+
+    <!-- FOOTER AREA -->
+    <footer class="h-14 w-full bg-slate-950 drop-shadow-lg shadow-slate-700"></footer>
+    <script src="script.js"></script>
+</body>
+</html>
