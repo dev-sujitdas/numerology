@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
     <title>Numerology</title>
 </head>
 <body>
@@ -11,12 +12,14 @@
     <main class="h-full w-full bg-slate-900 flex justify-center">
 
         <!-- WOKR AREA -->
-        <div id="workArea" class="h-full w-4/5 bg-slate-800">
+        <div id="workArea" class="h-full w-4/5 bg-slate-800 sm:w-w-4/5">
 
             <!-- TOP CONTAINER -->
-            <div id="top" class="h-[100px] mt-4 flex justify-center items-center">
-                <p class="text-white font-extrabold text-7xl font-serif">Numerology</p>
-            </div>
+            <div id="top" class="h-24 mt-4 flex justify-center items-center">
+                <p class="text-white font-extrabold font-serif sm:text-xl md:text-2xl lg:text-6xl xl:text-6xl">
+                  Numerology
+                </p>
+              </div>              
 
             <!-- MID CONTAINER -->
             <div id="mid" class="h-96 w-full mt-6 flex flex-col items-center">
@@ -64,7 +67,9 @@
     </main>
 
     <!-- FOOTER AREA -->
-    <footer class="h-14 w-full bg-slate-950 drop-shadow-lg shadow-slate-700"></footer>
+    <footer class="h-14 w-full bg-slate-950 drop-shadow-lg shadow-slate-700 flex justify-center items-center">
+        <h4 class="text-white text-center"><i class="ri-copyright-line"></i> 2024 | Crafter by Sujit Das</h4>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
