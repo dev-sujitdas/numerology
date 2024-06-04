@@ -24,15 +24,14 @@
             </div>
 
             <!-- MID CONTAINER -->
-            <div id="mid" class="h-96 w-full mt-6 flex flex-col items-center">
+            <div id="mid" class="h-80 w-full mt-6 flex flex-col items-center">
                 <div id="para" class="h-16 flex items-center justify-center">
                     <h1 class="text-zinc-200 font-medium text-center sm:text-base lg:text-xl">Chaldean Name Numerology -
                         Destiny, Heart Desire and Dream Numbers</h1>
                 </div>
 
                 <!-- NUMEROLOGY CARD -->
-                <div
-                    class="max-w-sm sm:max-w-xs md:max-w-sm lg:h-56 lg:w-96 xl:h-56 xl:w-96 flex flex-col justify-between overflow-hidden bg-slate-400 mt-6 rounded-lg shadow-xl shadow-slate-900">
+                <div class="max-w-sm sm:max-w-xs md:max-w-sm lg:h-56 lg:w-96 xl:h-56 xl:w-96 flex flex-col justify-between overflow-hidden bg-slate-400 mt-1 rounded-lg shadow-lg shadow-slate-900">
                     <div class="h-9 w-full bg-slate-700 flex items-center justify-center font-normal">
                         <p class="text-white">Name Numerology</p>
                     </div>
@@ -52,33 +51,36 @@
             </div>
 
             <!-- NUMEROLOGY REPORT CONTAINER -->
-            <div id="numerology-container" class="w-full h-72 flex justify-center">
-                <div id="report" class="w-[90%] h-64 bg-slate-900 rounded-md shadow-xl shadow-slate-950">
+            <div id="numerology-container" class="w-full h-auto flex justify-center ">
+                <div id="report" class="w-[90%] h-fit bg-slate-900 rounded-md shadow-xl shadow-slate-950 mb-7">
                     <div class="w-full h-12 text-center mt-5">
-                        <h1 id="title" class="font-bold text-4xl text-white capitalize"></h1>
+                        <h1 id="title" class="font-bold text-base lg:text-2xl text-white capitalize">Discover the meaning and significance of Chaldean numerology numbers.</h1>
                     </div>
-                    <div id="details" class="w-full h-fit mt-12 px-5">
+                    <div id="details" class="w-full h-auto mt-6 px-5">
                         <div class="flex">
-                            <p class="font-bold text-lg text-slate-300 mr-5 mb-5">Your Destiny Number is:</p>
+                            <p class="font-bold text-base lg:text-lg text-slate-300 mr-5 mb-5">Your Destiny Number is:</p>
                             <span
                                 class="h-8 w-8 bg-red-500 rounded-full flex items-center justify-center font-bold text-slate-200 text-lg">
                                 <h2 id="destiny-number">0</h2>
                             </span>
                         </div>
+                        <p id="destiny-traits" class="hidden mb-5 text-white"></p>
                         <div class="flex">
-                            <p class="font-bold text-lg text-slate-300 mr-5 mb-5">Your Heart Desire Number is:</p>
+                            <p class="font-bold text-base lg:text-lg text-slate-300 mr-5 mb-5">Your Heart Desire Number is:</p>
                             <span
                                 class="h-8 w-8 bg-red-500 rounded-full flex items-center justify-center font-bold text-slate-200 text-lg">
                                 <h2 id="heart-desire">0</h2>
                             </span>
                         </div>
+                        <p id="soul-traits" class="hidden mb-5 text-white"></p>
                         <div class="flex">
-                            <p class="font-bold text-lg text-slate-300 mr-5 mb-5">Your Personality Number is:</p>
+                            <p class="font-bold text-base lg:text-lg text-slate-300 mr-5 mb-5">Your Personality Number is:</p>
                             <span
                                 class="h-8 w-8 bg-red-500 rounded-full flex items-center justify-center font-bold text-slate-200 text-lg">
                                 <h2 id="personality-number">0</h2>
-                            </span>
+                            </span>                            
                         </div>
+                        <p id="personality-traits" class="hidden mb-5 text-white"></p>
                     </div>
                 </div>
             </div>
