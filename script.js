@@ -9,6 +9,7 @@ reset.addEventListener("click", function() {
     document.getElementById("personality-number").textContent = "0";
     document.getElementById("personality-traits").textContent = "";
     document.getElementById("destiny-traits").textContent = "";
+    document.getElementById("soul-traits").textContent = "";
 });
 
 // Numerology Chart
@@ -23,7 +24,7 @@ const numerologyChart = {
   F: 8, P: 8
 };
 
-// Traits of Personality
+// Traits of Personality Numbers
 const personalityTraits = {
   1: "The Natural Leader and Innovator: Number 1 is ruled by the Sun. Individuals born under the influence of number 1 act from a strong self-belief, have original ideas, and have a drive to be the best in every field they step or work they take.",  
   2: "The Caregiver and Harmoniser: Number 2 is ruled by the Moon. People with number 2 are known to be caring and peace maker. They try to build harmonic aura around themselves by supporting and avoiding clashes with others.",
@@ -49,6 +50,21 @@ const destinyTraits = {
   9: "Represents compassion, idealism, and generosity. Those with this number are compassionate and humanitarian, striving to make the world a better place. They are highly creative, generous, selfless, and embrace universal love and unity.",
   11: "Carries the potent vibrations of intuition, inspiration, and spiritual insight. Individuals with this master number are highly intuitive, perceptive, and often possess psychic abilities. They are inspirational leaders and visionaries, sensitive and empathetic.",
   22: "Known as the master builder, this number signifies ambition, practicality, and the ability to turn dreams into reality. People with this number are highly ambitious, practical, methodical, and natural leaders inclined towards philanthropy and humanitarian efforts."
+}
+
+// Traits of Soul Urge Numbers
+const soulTraits = {
+  1: "Represents a strong desire for independence, leadership, and self-expression. Individuals with this number crave recognition and often strive to stand out and achieve their personal goals. They have a deep inner drive to be original and self-reliant.",
+  2: "Signifies a longing for harmony, partnership, and emotional connection. People with this number seek to create peace and balance in their relationships. They have a strong desire to cooperate and avoid conflicts, valuing intimacy and companionship.",
+  3: "Highlights a passion for creativity, joy, and social interaction. Those with this number desire to express themselves artistically and enjoy being in social settings. They have an inner need for fun, laughter, and communication, thriving on positive energy and inspiration.",
+  4: "Embodies a yearning for stability, order, and practicality. Individuals with this number seek to build a secure and structured life. They value hard work, discipline, and reliability, often finding satisfaction in creating solid foundations and achieving tangible results.",
+  5: "Values freedom, adventure, and variety. People with this number crave new experiences and constant change. They have a deep inner desire for independence and flexibility, often seeking to explore different paths and avoid routine.",
+  6: "Emphasizes a strong need for love, nurturing, and responsibility. Those with this number desire to take care of others and create harmonious relationships. They have a deep connection to family and community, often finding fulfillment in service and caretaking roles.",
+  7: "Focuses on a quest for knowledge, introspection, and spiritual growth. Individuals with this number have a strong desire to understand the deeper aspects of life. They value solitude and reflection, often seeking wisdom and truth through study and meditation.",
+  8: "Centers on a drive for success, power, and material achievement. People with this number are motivated by a desire for financial security and authority. They have an inner ambition to excel in their endeavors and often seek to influence and lead others.",
+  9: "Represents a deep longing for compassion, altruism, and universal love. Those with this number desire to make a positive impact on the world. They are driven by humanitarian ideals and have a strong inner need to help and uplift others, embracing a global perspective.",
+  11: "Carries a powerful desire for spiritual insight, inspiration, and enlightenment. Individuals with this master number are highly intuitive and often feel a deep calling to serve a higher purpose. They seek to inspire and uplift others through their visionary ideas and spiritual understanding.",
+  22: "Known as the master builder, this number signifies a desire to create lasting impact and achieve great things. People with this number have a deep inner drive to turn grand visions into reality. They are motivated by practical ambition and a strong sense of responsibility to make a difference in the world."
 }
 
 
@@ -117,6 +133,8 @@ calculateNumerology.addEventListener("click", function() {
   document.getElementById("personality-traits").textContent = personalityTraits[numerology.personality];
   document.getElementById("destiny-traits").style.display = "block";
   document.getElementById("destiny-traits").textContent = destinyTraits[numerology.destiny];
+  document.getElementById("soul-traits").style.display ="block";
+  document.getElementById("soul-traits").textContent = soulTraits[numerology.soul];
 });
 
 
