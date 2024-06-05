@@ -10,6 +10,7 @@ reset.addEventListener("click", function() {
     document.getElementById("personality-traits").textContent = "";
     document.getElementById("destiny-traits").textContent = "";
     document.getElementById("soul-traits").textContent = "";
+    document.getElementById("caution").style.display = "";
 });
 
 // Numerology Chart
@@ -72,15 +73,15 @@ const soulTraits = {
 function calculateSum(Name, includeVowels) {
   let sum = 0;
   const vowels = ['A', 'E', 'I', 'O', 'U'];
+  let textbox = document.getElementById("text").value;
 
   for (let char of Name.toUpperCase()) {
-      if (numerologyChart[char]) {
-          if ((includeVowels === undefined) || (includeVowels && vowels.includes(char)) || (!includeVowels && !vowels.includes(char))) {
-              sum += numerologyChart[char];
-          }
-      }
-  }
-
+    if (numerologyChart[char]) {
+        if ((includeVowels === undefined) || (includeVowels && vowels.includes(char)) || (!includeVowels && !vowels.includes(char))) {
+            sum += numerologyChart[char];
+        }
+    }
+}
   return sum;
 }
 
@@ -122,19 +123,23 @@ function numerologyReport(Name) {
 // Final Report
 const calculateNumerology = document.getElementById("calculate");
 calculateNumerology.addEventListener("click", function() {
-  let Name = document.getElementById("text").value;
-  let numerology = numerologyReport(Name);
+  let name = document.getElementById("text").value;
+  let numerology = numerologyReport(name);
+  if(name === ""){
+    document.getElementById("caution").style.display = "block";
+  }else{    
+    document.getElementById("title").textContent = name;
+    document.getElementById("destiny-number").textContent = numerology.destiny;
+    document.getElementById("heart-desire").textContent = numerology.soul;
+    document.getElementById("personality-number").textContent = numerology.personality;
+    document.getElementById("personality-traits").style.display = "block";
+    document.getElementById("personality-traits").textContent = personalityTraits[numerology.personality];
+    document.getElementById("destiny-traits").style.display = "block";
+    document.getElementById("destiny-traits").textContent = destinyTraits[numerology.destiny];
+    document.getElementById("soul-traits").style.display ="block";
+    document.getElementById("soul-traits").textContent = soulTraits[numerology.soul];
+  }  
   
-  document.getElementById("title").textContent = Name;
-  document.getElementById("destiny-number").textContent = numerology.destiny;
-  document.getElementById("heart-desire").textContent = numerology.soul;
-  document.getElementById("personality-number").textContent = numerology.personality;
-  document.getElementById("personality-traits").style.display = "block";
-  document.getElementById("personality-traits").textContent = personalityTraits[numerology.personality];
-  document.getElementById("destiny-traits").style.display = "block";
-  document.getElementById("destiny-traits").textContent = destinyTraits[numerology.destiny];
-  document.getElementById("soul-traits").style.display ="block";
-  document.getElementById("soul-traits").textContent = soulTraits[numerology.soul];
 });
 
 
